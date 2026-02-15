@@ -5,7 +5,7 @@ var rng = RandomNumberGenerator.new()
 
 func _ready():
 	reset_snake()
-
+		
 func reset_snake():
 	#for segment in SnakeManager.segments:
 		#segment.queue_free()
@@ -13,11 +13,16 @@ func reset_snake():
 	$Slabakaca1.position = Vector2(500, 300)
 	$Slabakaca1.rotation = 0
 	SnakeManager.trail.clear()
-	SnakeManager.time_left = 30
+	SnakeManager.time_left = 123
 	SnakeManager.score = 0
 	for i in range(SnakeManager.FRAMES_PER_SEGMENT * 3):
 		SnakeManager.add_head_position($Slabakaca1.position)
+		
 	spawn_food()
+	
+	for i in range(3):
+		await get_tree().create_timer(0.3).timeout
+		SnakeManager.add_segment()
 
 func spawn_food():
 	var food = food_scene.instantiate()
@@ -45,3 +50,12 @@ func _on_timer_timeout() -> void:
 
 func _on_timer_konec_igre_timeout() -> void:
 	SnakeManager.time_left -= 1
+
+func _on_play_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("kacja_glava"):
+		SnakeManager.game_over()
+
+
+func _on_play_area_area_exited(area: Area2D) -> void:
+	if area.is_in_group("kacja_glava"):
+		SnakeManager.game_over()

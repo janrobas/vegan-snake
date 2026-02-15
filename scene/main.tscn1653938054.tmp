@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqosilhhp7rb3"]
+[gd_scene load_steps=6 format=3 uid="uid://bqosilhhp7rb3"]
 
 [ext_resource type="PackedScene" uid="uid://bqyu142lcsp0q" path="res://objekti/glava.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cs0yrejfcfl5j" path="res://skripti/main.gd" id="1_h2yge"]
@@ -6,15 +6,14 @@
 [ext_resource type="Script" uid="uid://dgo5uuehll8dm" path="res://scene/label_cas.gd" id="4_0ha60"]
 [ext_resource type="Script" uid="uid://7wneggecd27c" path="res://skripti/label_tocke.gd" id="4_1bvp3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
-size = Vector2(1241.88, 741.625)
-
 [node name="main" type="Node2D"]
 script = ExtResource("1_h2yge")
 food_scene = ExtResource("2_h2yge")
 
-[node name="Slabakaca1" parent="." groups=["kacja_glava"] instance=ExtResource("1_0xm2m")]
+[node name="Slabakaca1" parent="." instance=ExtResource("1_0xm2m")]
 position = Vector2(548, 236)
+speed = null
+angular_speed = null
 
 [node name="Snake" type="Node2D" parent="." groups=["snake_container"]]
 
@@ -43,13 +42,5 @@ offset_bottom = 23.0
 text = "TEST"
 script = ExtResource("4_1bvp3")
 
-[node name="PlayArea" type="Area2D" parent="."]
-collision_mask = 7
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
-position = Vector2(574.063, 322.188)
-shape = SubResource("RectangleShape2D_0ha60")
-
 [connection signal="timeout" from="TimerHrana" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerKonecIgre" to="." method="_on_timer_konec_igre_timeout"]
-[connection signal="area_exited" from="PlayArea" to="." method="_on_play_area_area_exited"]

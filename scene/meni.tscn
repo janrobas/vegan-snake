@@ -5,8 +5,8 @@
 [node name="meni" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 481.0
+offset_bottom = 268.0
 text = "Začni!"
 script = ExtResource("1_ku7gb")
 

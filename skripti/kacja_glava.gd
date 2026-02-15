@@ -1,8 +1,9 @@
 extends Node2D
 
-@export var speed := 200.0          # pixels per second
-@export var angular_speed := 180.0  # degrees per second
+@export var speed := 220.0          # pixels per second
+@export var angular_speed := 210.0  # degrees per second
 
+	
 func _ready():
 	pass
 	#for i in range(SnakeManager.FRAMES_PER_SEGMENT * 3):
@@ -19,7 +20,16 @@ func _process(delta: float) -> void:
 	position += velocity
 
 	SnakeManager.add_head_position(position)
-	
+
+func game_over():
+	SnakeManager.time_left = 0
+
+func flash(color: Color, duration: float):
+	modulate = color
+	await get_tree().create_timer(duration).timeout
+	modulate = Color.WHITE
+
+
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("hrana"):
 		match area.type:
@@ -29,6 +39,9 @@ func _on_area_entered(area: Area2D) -> void:
 			Hrana.Type.BAD:
 				SnakeManager.remove_last_segment()
 				SnakeManager.score -= 1
+				flash(Color.RED, 0.1)
 		area.queue_free()
 		#get_node("/root/main").spawn_food()
 		get_node("/root/main").call_deferred("spawn_food")
+	elif area.is_in_group("kacji_segment"):
+		game_over()

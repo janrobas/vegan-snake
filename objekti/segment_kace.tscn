@@ -4,12 +4,13 @@
 [ext_resource type="Script" uid="uid://bymsex5b3e8s5" path="res://skripti/kacji_segment.gd" id="2_uditw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkjjn"]
-size = Vector2(72, 38)
+size = Vector2(24, 24)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["kacji_segment"]]
 script = ExtResource("2_uditw")
 
 [node name="Slabakaca2" type="Sprite2D" parent="."]
+scale = Vector2(0.631579, 0.631579)
 texture = ExtResource("1_fkjjn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

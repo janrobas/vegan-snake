@@ -4,7 +4,7 @@ var trail : Array[Vector2] = []
 signal score_changed(new_score)
 signal time_left_changed(time_left)
 
-const FRAMES_PER_SEGMENT := 10
+const FRAMES_PER_SEGMENT := 7
 
 const MAX_TRAIL_SIZE := 1000
 var body_scene : PackedScene = preload("res://objekti/segment_kace.tscn")
@@ -20,7 +20,7 @@ func _set_score(value: int):
 
 func _set_time_left(value: int):
 	time_left = value
-	time_left_changed.emit(score)
+	time_left_changed.emit(time_left)
 	
 	if time_left == 0:
 		get_tree().change_scene_to_file("res://scene/konec_igre.tscn")
@@ -60,3 +60,6 @@ func get_head_position() -> Vector2:
 	if trail.is_empty():
 		return Vector2.ZERO
 	return trail[-1]
+	
+func game_over():
+	time_left = 0

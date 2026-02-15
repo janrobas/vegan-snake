@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://7wneggecd27c" path="res://skripti/label_tocke.gd" id="4_1bvp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
-size = Vector2(1241.88, 741.625)
+size = Vector2(715.75, 357.25)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -47,9 +47,10 @@ script = ExtResource("4_1bvp3")
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
-position = Vector2(574.063, 322.188)
+position = Vector2(575.125, 301.375)
 shape = SubResource("RectangleShape2D_0ha60")
 
 [connection signal="timeout" from="TimerHrana" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerKonecIgre" to="." method="_on_timer_konec_igre_timeout"]
 [connection signal="area_exited" from="PlayArea" to="." method="_on_play_area_area_exited"]
+[connection signal="body_exited" from="PlayArea" to="." method="_on_play_area_body_exited"]
