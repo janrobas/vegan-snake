@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://d3oe57s8l7use" path="res://images/kaca/slabakaca_glava.png" id="2_5mfks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tccwc"]
-size = Vector2(20, 24)
+size = Vector2(23, 30)
 
 [node name="CharacterBody2D" type="Area2D"]
 z_index = 1
 script = ExtResource("1_ik8gx")
 
 [node name="Slabakaca1" type="Sprite2D" parent="."]
-scale = Vector2(0.736842, 0.631579)
+scale = Vector2(0.894737, 0.766917)
 texture = ExtResource("2_5mfks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 0)
+position = Vector2(4.5, 0)
 shape = SubResource("RectangleShape2D_tccwc")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

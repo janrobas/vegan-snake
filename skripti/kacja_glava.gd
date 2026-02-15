@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 	var velocity = Vector2.RIGHT.rotated(rotation) * speed * delta
 	position += velocity
 
-	SnakeManager.add_head_position(position)
+	#SnakeManager.add_head_position(position)
 
 func game_over():
 	SnakeManager.time_left = 0

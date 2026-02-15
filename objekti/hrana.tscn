@@ -1,20 +1,37 @@
-[gd_scene load_steps=8 format=3 uid="uid://damdfxfi8p6l"]
+[gd_scene load_steps=23 format=3 uid="uid://damdfxfi8p6l"]
 
 [ext_resource type="Texture2D" uid="uid://b3tngfpgktmbb" path="res://images/food/30_chocolatecake.png" id="1_i3rd3"]
 [ext_resource type="Script" uid="uid://duukxxg8r0t0t" path="res://skripti/hrana.gd" id="1_y0u8l"]
 [ext_resource type="Texture2D" uid="uid://bg6e7oormwhrg" path="res://images/food/07_bread.png" id="2_aa42f"]
 [ext_resource type="Texture2D" uid="uid://c7e52ian1ngsh" path="res://images/food/11_bun.png" id="3_uf0f1"]
+[ext_resource type="Texture2D" uid="uid://dayvt8emfpt4w" path="res://images/food/44_frenchfries.png" id="4_2rq5j"]
 [ext_resource type="Texture2D" uid="uid://diqpcfwhdlj64" path="res://images/food/15_burger.png" id="4_glkjn"]
+[ext_resource type="Texture2D" uid="uid://dot6k13oah6dd" path="res://images/food/46_fruitcake.png" id="5_omd43"]
 [ext_resource type="Texture2D" uid="uid://c4vds72xkotlb" path="res://images/food/18_burrito.png" id="5_wi1cq"]
+[ext_resource type="Texture2D" uid="uid://cul06j3b67v6h" path="res://images/food/61_jam.png" id="6_0ep1t"]
+[ext_resource type="Texture2D" uid="uid://6n1lcufhndl7" path="res://images/food/77_potatochips.png" id="7_co4i7"]
+[ext_resource type="Texture2D" uid="uid://b4kybiij3pipq" path="res://images/food/83_popcorn.png" id="8_qkfdy"]
+[ext_resource type="Texture2D" uid="uid://py2275fbufeb" path="res://images/food/101_waffle.png" id="9_iohrd"]
+[ext_resource type="Texture2D" uid="uid://3f0v8mn6dgyi" path="res://images/food/62_jam_dish.png" id="10_3wo4c"]
+[ext_resource type="Texture2D" uid="uid://brumbeoysc6cu" path="res://images/food/48_garlicbread.png" id="11_a777r"]
+[ext_resource type="Texture2D" uid="uid://bjrtkw6i4ilqq" path="res://images/food/13_bacon.png" id="11_hnyht"]
+[ext_resource type="Texture2D" uid="uid://d0sheh6dws2cs" path="res://images/food/38_friedegg.png" id="12_iohrd"]
+[ext_resource type="Texture2D" uid="uid://ceopot4u7dhjk" path="res://images/food/54_hotdog.png" id="13_3wo4c"]
+[ext_resource type="Texture2D" uid="uid://dovajh6ootw8q" path="res://images/food/88_salmon.png" id="14_a777r"]
+[ext_resource type="Texture2D" uid="uid://ca1jnxg2tbb4y" path="res://images/food/92_sandwich.png" id="18_72lgq"]
+[ext_resource type="Texture2D" uid="uid://biidfdaflmqtj" path="res://images/food/95_steak.png" id="19_fty1n"]
+[ext_resource type="Texture2D" uid="uid://by028k5dr14a6" path="res://images/food/85_roastedchicken.png" id="20_owr28"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3rd3"]
+radius = 17.0294
 
 [node name="Hrana" type="Area2D" groups=["hrana"]]
 script = ExtResource("1_y0u8l")
-good_textures = Array[Texture2D]([ExtResource("2_aa42f"), ExtResource("3_uf0f1")])
-bad_textures = Array[Texture2D]([ExtResource("4_glkjn"), ExtResource("5_wi1cq")])
+good_textures = Array[Texture2D]([ExtResource("2_aa42f"), ExtResource("3_uf0f1"), ExtResource("4_2rq5j"), ExtResource("5_omd43"), ExtResource("6_0ep1t"), ExtResource("7_co4i7"), ExtResource("8_qkfdy"), ExtResource("9_iohrd"), ExtResource("10_3wo4c"), ExtResource("11_a777r")])
+bad_textures = Array[Texture2D]([ExtResource("4_glkjn"), ExtResource("5_wi1cq"), ExtResource("11_hnyht"), ExtResource("12_iohrd"), ExtResource("13_3wo4c"), ExtResource("14_a777r"), ExtResource("18_72lgq"), ExtResource("19_fty1n"), ExtResource("20_owr28")])
 
 [node name="HranaSprite" type="Sprite2D" parent="."]
+scale = Vector2(1.4375, 1.4375)
 texture = ExtResource("1_i3rd3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

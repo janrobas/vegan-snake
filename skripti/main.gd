@@ -15,8 +15,6 @@ func reset_snake():
 	SnakeManager.trail.clear()
 	SnakeManager.time_left = 123
 	SnakeManager.score = 0
-	for i in range(SnakeManager.FRAMES_PER_SEGMENT * 3):
-		SnakeManager.add_head_position($Slabakaca1.position)
 		
 	spawn_food()
 	
