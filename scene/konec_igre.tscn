@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://g0hvlp3bo1w3"]
 
-[ext_resource type="Script" uid="uid://ciura2fkxpmsa" path="res://konec_igre.gd" id="1_unltr"]
+[ext_resource type="Script" uid="uid://ciura2fkxpmsa" path="res://skripti/konec_igre.gd" id="1_unltr"]
 
 [node name="KonecIgre" type="Node2D"]
 script = ExtResource("1_unltr")

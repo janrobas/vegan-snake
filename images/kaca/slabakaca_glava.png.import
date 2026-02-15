@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1jfbns2i4tor"
-path="res://.godot/imported/slabakaca1 – kopija.png-02c3a77b9777bc940022a1cbee3eacee.ctex"
+uid="uid://d3oe57s8l7use"
+path="res://.godot/imported/slabakaca_glava.png-402573d402cc66ea0024c12c2ecacffa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slabakaca1 – kopija.png"
-dest_files=["res://.godot/imported/slabakaca1 – kopija.png-02c3a77b9777bc940022a1cbee3eacee.ctex"]
+source_file="res://images/kaca/slabakaca_glava.png"
+dest_files=["res://.godot/imported/slabakaca_glava.png-402573d402cc66ea0024c12c2ecacffa.ctex"]
 
 [params]
 

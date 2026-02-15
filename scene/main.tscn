@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqosilhhp7rb3"]
 
-[ext_resource type="PackedScene" uid="uid://bqyu142lcsp0q" path="res://slabakaca_1.tscn" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://cs0yrejfcfl5j" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://damdfxfi8p6l" path="res://hrana.tscn" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://7wneggecd27c" path="res://label_tocke.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bqyu142lcsp0q" path="res://objekti/glava.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cs0yrejfcfl5j" path="res://skripti/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://damdfxfi8p6l" path="res://objekti/hrana.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://7wneggecd27c" path="res://skripti/label_tocke.gd" id="4_1bvp3"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -13,9 +13,6 @@ food_scene = ExtResource("2_h2yge")
 position = Vector2(548, 236)
 
 [node name="Snake" type="Node2D" parent="." groups=["snake_container"]]
-
-[node name="Hrana" parent="." instance=ExtResource("2_h2yge")]
-position = Vector2(87, 74)
 
 [node name="LabelTocke" type="Label" parent="."]
 offset_right = 40.0

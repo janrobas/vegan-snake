@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://myeibtroa5ls"]
 
-[ext_resource type="Script" uid="uid://dl4y7pxyk2gwo" path="res://button.gd" id="1_7xn1a"]
+[ext_resource type="Script" uid="uid://dl4y7pxyk2gwo" path="res://skripti/glavni_meni.gd" id="1_ku7gb"]
 
 [node name="meni" type="Node2D"]
 
@@ -8,6 +8,6 @@
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Začni!"
-script = ExtResource("1_7xn1a")
+script = ExtResource("1_ku7gb")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -30,4 +30,5 @@ func _on_area_entered(area: Area2D) -> void:
 				SnakeManager.remove_last_segment()
 				SnakeManager.score -= 1
 		area.queue_free()
-		get_node("/root/main").spawn_food()
+		#get_node("/root/main").spawn_food()
+		get_node("/root/main").call_deferred("spawn_food")

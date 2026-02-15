@@ -1,6 +1,5 @@
 extends Node
 
-var snake_container: Node
 var trail : Array[Vector2] = []
 signal score_changed(new_score)
 signal time_left_changed(time_left)
@@ -8,7 +7,7 @@ signal time_left_changed(time_left)
 const FRAMES_PER_SEGMENT := 10
 
 const MAX_TRAIL_SIZE := 1000
-var body_scene : PackedScene = preload("res://slabakaca_2.tscn")
+var body_scene : PackedScene = preload("res://objekti/segment_kace.tscn")
 
 var segments : Array[Node] = []
 
@@ -24,19 +23,15 @@ func _set_time_left(value: int):
 	time_left_changed.emit(score)
 	
 	if time_left == 0:
-		get_tree().change_scene_to_file("res://konec_igre.tscn")
-
-func _ready():
-	snake_container = get_tree().get_first_node_in_group("snake_container")
-	if not snake_container:
-		push_error("Snake container not found! Make sure a node is in the 'snake_container' group.")
+		get_tree().change_scene_to_file("res://scene/konec_igre.tscn")
 
 func add_segment() -> void:
 	var new_segment = body_scene.instantiate()
 	
 	var container = get_tree().get_first_node_in_group("snake_container")
 	if container:
-		container.add_child(new_segment)
+		#container.add_child(new_segment)
+		container.call_deferred("add_child", new_segment)
 	else:
 		push_error("Snake container not found")
 	

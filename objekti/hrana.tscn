@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://damdfxfi8p6l"]
 
 [ext_resource type="Texture2D" uid="uid://b3tngfpgktmbb" path="res://images/food/30_chocolatecake.png" id="1_i3rd3"]
-[ext_resource type="Script" uid="uid://duukxxg8r0t0t" path="res://hrana.gd" id="1_y0u8l"]
+[ext_resource type="Script" uid="uid://duukxxg8r0t0t" path="res://skripti/hrana.gd" id="1_y0u8l"]
 [ext_resource type="Texture2D" uid="uid://bg6e7oormwhrg" path="res://images/food/07_bread.png" id="2_aa42f"]
 [ext_resource type="Texture2D" uid="uid://c7e52ian1ngsh" path="res://images/food/11_bun.png" id="3_uf0f1"]
 [ext_resource type="Texture2D" uid="uid://diqpcfwhdlj64" path="res://images/food/15_burger.png" id="4_glkjn"]
