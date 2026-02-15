@@ -21,8 +21,8 @@ rotation = 0.00368991
 text = "Konec!"
 
 [node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 209.0
+offset_bottom = 68.0
 text = "Nazaj na meni"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

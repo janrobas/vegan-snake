@@ -1,38 +1,61 @@
-[gd_scene load_steps=23 format=3 uid="uid://damdfxfi8p6l"]
+[gd_scene load_steps=44 format=3 uid="uid://damdfxfi8p6l"]
 
-[ext_resource type="Texture2D" uid="uid://b3tngfpgktmbb" path="res://images/food/30_chocolatecake.png" id="1_i3rd3"]
 [ext_resource type="Script" uid="uid://duukxxg8r0t0t" path="res://skripti/hrana.gd" id="1_y0u8l"]
-[ext_resource type="Texture2D" uid="uid://bg6e7oormwhrg" path="res://images/food/07_bread.png" id="2_aa42f"]
-[ext_resource type="Texture2D" uid="uid://c7e52ian1ngsh" path="res://images/food/11_bun.png" id="3_uf0f1"]
-[ext_resource type="Texture2D" uid="uid://dayvt8emfpt4w" path="res://images/food/44_frenchfries.png" id="4_2rq5j"]
-[ext_resource type="Texture2D" uid="uid://diqpcfwhdlj64" path="res://images/food/15_burger.png" id="4_glkjn"]
-[ext_resource type="Texture2D" uid="uid://dot6k13oah6dd" path="res://images/food/46_fruitcake.png" id="5_omd43"]
-[ext_resource type="Texture2D" uid="uid://c4vds72xkotlb" path="res://images/food/18_burrito.png" id="5_wi1cq"]
-[ext_resource type="Texture2D" uid="uid://cul06j3b67v6h" path="res://images/food/61_jam.png" id="6_0ep1t"]
-[ext_resource type="Texture2D" uid="uid://6n1lcufhndl7" path="res://images/food/77_potatochips.png" id="7_co4i7"]
-[ext_resource type="Texture2D" uid="uid://b4kybiij3pipq" path="res://images/food/83_popcorn.png" id="8_qkfdy"]
-[ext_resource type="Texture2D" uid="uid://py2275fbufeb" path="res://images/food/101_waffle.png" id="9_iohrd"]
-[ext_resource type="Texture2D" uid="uid://3f0v8mn6dgyi" path="res://images/food/62_jam_dish.png" id="10_3wo4c"]
-[ext_resource type="Texture2D" uid="uid://brumbeoysc6cu" path="res://images/food/48_garlicbread.png" id="11_a777r"]
-[ext_resource type="Texture2D" uid="uid://bjrtkw6i4ilqq" path="res://images/food/13_bacon.png" id="11_hnyht"]
-[ext_resource type="Texture2D" uid="uid://d0sheh6dws2cs" path="res://images/food/38_friedegg.png" id="12_iohrd"]
-[ext_resource type="Texture2D" uid="uid://ceopot4u7dhjk" path="res://images/food/54_hotdog.png" id="13_3wo4c"]
-[ext_resource type="Texture2D" uid="uid://dovajh6ootw8q" path="res://images/food/88_salmon.png" id="14_a777r"]
-[ext_resource type="Texture2D" uid="uid://ca1jnxg2tbb4y" path="res://images/food/92_sandwich.png" id="18_72lgq"]
-[ext_resource type="Texture2D" uid="uid://biidfdaflmqtj" path="res://images/food/95_steak.png" id="19_fty1n"]
-[ext_resource type="Texture2D" uid="uid://by028k5dr14a6" path="res://images/food/85_roastedchicken.png" id="20_owr28"]
+[ext_resource type="Texture2D" uid="uid://c0cj2sjp8cvnn" path="res://images/vegan/05_apple_pie.png" id="2_vtgvo"]
+[ext_resource type="Texture2D" uid="uid://cphjb8hn3ww8x" path="res://images/vegan/07_bread.png" id="3_p0mfi"]
+[ext_resource type="Texture2D" uid="uid://bb2cnxk7ca1c" path="res://images/vegan/09_baguette.png" id="4_lhbfk"]
+[ext_resource type="Texture2D" uid="uid://dhgx6jltuqqwc" path="res://images/vegan/11_bun.png" id="5_lqut0"]
+[ext_resource type="Texture2D" uid="uid://6532hrxgu2jr" path="res://images/vegan/20_bagel.png" id="6_epejj"]
+[ext_resource type="Texture2D" uid="uid://duefpe61i1ajm" path="res://images/vegan/44_frenchfries.png" id="7_iaxc0"]
+[ext_resource type="Texture2D" uid="uid://ns8lwyx3ft7y" path="res://images/vegan/48_garlicbread.png" id="8_o5onb"]
+[ext_resource type="Texture2D" uid="uid://cydk7ryap2ykg" path="res://images/vegan/61_jam.png" id="9_53sht"]
+[ext_resource type="Texture2D" uid="uid://dtdqw0h2hqwjk" path="res://images/vegan/62_jam_dish.png" id="10_ul41p"]
+[ext_resource type="Texture2D" uid="uid://cf8wtgrcitd13" path="res://images/vegan/65_loafbread.png" id="11_t4eqs"]
+[ext_resource type="Texture2D" uid="uid://brt8ty0y0vkrg" path="res://images/vegan/66_loafbread_dish.png" id="12_rsifv"]
+[ext_resource type="Texture2D" uid="uid://c7enqddgw2uqk" path="res://images/vegan/78_potatochips_bowl.png" id="13_kypsc"]
+[ext_resource type="Texture2D" uid="uid://cjjb080s85vf8" path="res://images/vegan/banana.png" id="14_qrbl5"]
+[ext_resource type="Texture2D" uid="uid://6asl255ro2kv" path="res://images/vegan/bell_pepper.png" id="15_b6lrd"]
+[ext_resource type="Texture2D" uid="uid://l17odv8bryfj" path="res://images/vegan/cabbage.png" id="16_rb8f1"]
+[ext_resource type="Texture2D" uid="uid://wlbj0u23lv4q" path="res://images/vegan/grape_soda.png" id="17_bin8a"]
+[ext_resource type="Texture2D" uid="uid://cvxvt2qlslkbx" path="res://images/vegan/ketchup.png" id="18_e7rkk"]
+[ext_resource type="Texture2D" uid="uid://bwq3pydpe3s3l" path="res://images/vegan/mushroom_white.png" id="19_bdm62"]
+[ext_resource type="Texture2D" uid="uid://c134n010cwhge" path="res://images/vegan/orange_juice.png" id="20_oahoi"]
+[ext_resource type="Texture2D" uid="uid://bmwgligsjvt77" path="res://images/vegan/potatochip_green.png" id="21_blcnl"]
+[ext_resource type="Texture2D" uid="uid://b3fcqdsnwkggx" path="res://images/vegan/red_apple.png" id="22_pdpyy"]
+[ext_resource type="Texture2D" uid="uid://dltn1vwx5qnr3" path="res://images/vegan/soft_drink_blue.png" id="23_cye2o"]
+[ext_resource type="Texture2D" uid="uid://36n6q2ijpauh" path="res://images/vegan/soft_drink_red.png" id="24_k3vxl"]
+[ext_resource type="Texture2D" uid="uid://bqockxxdywv54" path="res://images/vegan/strawberry_p.png" id="25_clokx"]
+[ext_resource type="Texture2D" uid="uid://bs4llfj4re55y" path="res://images/vegan/watermelon1.png" id="26_nqcag"]
+[ext_resource type="Texture2D" uid="uid://q4ay0y3osc0g" path="res://images/vegan/watermelon2.png" id="27_xkcys"]
+[ext_resource type="Texture2D" uid="uid://x0180vieh603" path="res://images/nonvegan/13_bacon.png" id="28_e7oq6"]
+[ext_resource type="Texture2D" uid="uid://bq12mah0a0xfb" path="res://images/nonvegan/15_burger.png" id="29_7ttdn"]
+[ext_resource type="Texture2D" uid="uid://uqjqm1acb4ft" path="res://images/nonvegan/38_friedegg.png" id="30_ditrl"]
+[ext_resource type="Texture2D" uid="uid://b0sile00n4ikv" path="res://images/nonvegan/54_hotdog.png" id="31_tx2w2"]
+[ext_resource type="Texture2D" uid="uid://cjhit0v5o7mxv" path="res://images/nonvegan/55_hotdog_sauce.png" id="32_yphf1"]
+[ext_resource type="Texture2D" uid="uid://c2g0ute8e10xc" path="res://images/nonvegan/81_pizza.png" id="33_3xnlh"]
+[ext_resource type="Texture2D" uid="uid://bjcyfjamwsrhn" path="res://images/nonvegan/85_roastedchicken.png" id="34_vtg4v"]
+[ext_resource type="Texture2D" uid="uid://c0utsrub6myfi" path="res://images/nonvegan/89_salmon_dish.png" id="35_l08f8"]
+[ext_resource type="Texture2D" uid="uid://ks7stn5n0d6o" path="res://images/nonvegan/92_sandwich.png" id="36_q0ygt"]
+[ext_resource type="Texture2D" uid="uid://bsot382sck4jq" path="res://images/nonvegan/95_steak.png" id="37_xslf1"]
+[ext_resource type="Texture2D" uid="uid://cs333iub7t3al" path="res://images/nonvegan/97_sushi.png" id="38_txvy0"]
+[ext_resource type="Texture2D" uid="uid://bg0kvyiljtdi5" path="res://images/nonvegan/fish.png" id="39_y8sdn"]
+[ext_resource type="Texture2D" uid="uid://cavwc2skhk07h" path="res://images/nonvegan/meat1.png" id="40_mh6ra"]
+[ext_resource type="Texture2D" uid="uid://bke40e7on3ik0" path="res://images/nonvegan/tuna_can.png" id="41_ai7kg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o5d7d"]
+load_path = "res://.godot/imported/30_chocolatecake.png-c07de8e772cdcb553721a171326f5070.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3rd3"]
 radius = 17.0294
 
 [node name="Hrana" type="Area2D" groups=["hrana"]]
 script = ExtResource("1_y0u8l")
-good_textures = Array[Texture2D]([ExtResource("2_aa42f"), ExtResource("3_uf0f1"), ExtResource("4_2rq5j"), ExtResource("5_omd43"), ExtResource("6_0ep1t"), ExtResource("7_co4i7"), ExtResource("8_qkfdy"), ExtResource("9_iohrd"), ExtResource("10_3wo4c"), ExtResource("11_a777r")])
-bad_textures = Array[Texture2D]([ExtResource("4_glkjn"), ExtResource("5_wi1cq"), ExtResource("11_hnyht"), ExtResource("12_iohrd"), ExtResource("13_3wo4c"), ExtResource("14_a777r"), ExtResource("18_72lgq"), ExtResource("19_fty1n"), ExtResource("20_owr28")])
+good_textures = Array[Texture2D]([ExtResource("2_vtgvo"), ExtResource("3_p0mfi"), ExtResource("4_lhbfk"), ExtResource("5_lqut0"), ExtResource("6_epejj"), ExtResource("7_iaxc0"), ExtResource("8_o5onb"), ExtResource("9_53sht"), ExtResource("10_ul41p"), ExtResource("11_t4eqs"), ExtResource("12_rsifv"), ExtResource("13_kypsc"), ExtResource("14_qrbl5"), ExtResource("15_b6lrd"), ExtResource("16_rb8f1"), ExtResource("17_bin8a"), ExtResource("18_e7rkk"), ExtResource("19_bdm62"), ExtResource("20_oahoi"), ExtResource("21_blcnl"), ExtResource("22_pdpyy"), ExtResource("23_cye2o"), ExtResource("24_k3vxl"), ExtResource("25_clokx"), ExtResource("26_nqcag"), ExtResource("27_xkcys")])
+bad_textures = Array[Texture2D]([ExtResource("28_e7oq6"), ExtResource("29_7ttdn"), ExtResource("30_ditrl"), ExtResource("31_tx2w2"), ExtResource("32_yphf1"), ExtResource("33_3xnlh"), ExtResource("34_vtg4v"), ExtResource("35_l08f8"), ExtResource("36_q0ygt"), ExtResource("37_xslf1"), ExtResource("38_txvy0"), ExtResource("39_y8sdn"), ExtResource("40_mh6ra"), ExtResource("41_ai7kg")])
 
 [node name="HranaSprite" type="Sprite2D" parent="."]
 scale = Vector2(1.4375, 1.4375)
-texture = ExtResource("1_i3rd3")
+texture = SubResource("CompressedTexture2D_o5d7d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_i3rd3")

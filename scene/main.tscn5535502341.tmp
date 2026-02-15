@@ -1,13 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqosilhhp7rb3"]
+[gd_scene load_steps=7 format=3 uid="uid://bqosilhhp7rb3"]
 
 [ext_resource type="PackedScene" uid="uid://bqyu142lcsp0q" path="res://objekti/glava.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cs0yrejfcfl5j" path="res://skripti/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://damdfxfi8p6l" path="res://objekti/hrana.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://dgo5uuehll8dm" path="res://scene/label_cas.gd" id="4_0ha60"]
 [ext_resource type="Script" uid="uid://7wneggecd27c" path="res://skripti/label_tocke.gd" id="4_1bvp3"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5ol"]
-size = Vector2(1100, 3000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
 size = Vector2(1175.88, 673.625)
@@ -42,14 +39,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="CanvasLayer/Control"]
-shape = SubResource("RectangleShape2D_4j5ol")
-action = "turn_left"
+[node name="TextureButtonLeft" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 342.0
+grow_vertical = 2
 
-[node name="TouchScreenButtonRight" type="TouchScreenButton" parent="CanvasLayer/Control"]
-position = Vector2(1177.43, 0)
-shape = SubResource("RectangleShape2D_4j5ol")
-action = "turn_right"
+[node name="TextureButtonRight" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Slabakaca1" parent="." groups=["kacja_glava"] instance=ExtResource("1_0xm2m")]
 position = Vector2(548, 236)
@@ -64,9 +64,11 @@ autostart = true
 autostart = true
 
 [node name="PlayArea" type="Area2D" parent="."]
+visible = false
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
+visible = false
 position = Vector2(574.063, 322.188)
 shape = SubResource("RectangleShape2D_0ha60")
 
