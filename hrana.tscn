@@ -1,0 +1,21 @@
+[gd_scene load_steps=8 format=3 uid="uid://damdfxfi8p6l"]
+
+[ext_resource type="Texture2D" uid="uid://b3tngfpgktmbb" path="res://images/food/30_chocolatecake.png" id="1_i3rd3"]
+[ext_resource type="Script" uid="uid://duukxxg8r0t0t" path="res://hrana.gd" id="1_y0u8l"]
+[ext_resource type="Texture2D" uid="uid://bg6e7oormwhrg" path="res://images/food/07_bread.png" id="2_aa42f"]
+[ext_resource type="Texture2D" uid="uid://c7e52ian1ngsh" path="res://images/food/11_bun.png" id="3_uf0f1"]
+[ext_resource type="Texture2D" uid="uid://diqpcfwhdlj64" path="res://images/food/15_burger.png" id="4_glkjn"]
+[ext_resource type="Texture2D" uid="uid://c4vds72xkotlb" path="res://images/food/18_burrito.png" id="5_wi1cq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3rd3"]
+
+[node name="Hrana" type="Area2D" groups=["hrana"]]
+script = ExtResource("1_y0u8l")
+good_textures = Array[Texture2D]([ExtResource("2_aa42f"), ExtResource("3_uf0f1")])
+bad_textures = Array[Texture2D]([ExtResource("4_glkjn"), ExtResource("5_wi1cq")])
+
+[node name="HranaSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_i3rd3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i3rd3")

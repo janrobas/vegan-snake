@@ -1,0 +1,33 @@
+extends Node2D
+
+@export var speed := 200.0          # pixels per second
+@export var angular_speed := 180.0  # degrees per second
+
+func _ready():
+	pass
+	#for i in range(SnakeManager.FRAMES_PER_SEGMENT * 3):
+		#SnakeManager.add_head_position(position)
+	#
+	#for i in range(1,3):
+		#SnakeManager.add_segment()
+
+func _process(delta: float) -> void:
+	var rotation_dir = Input.get_axis("ui_left", "ui_right")
+	rotation += deg_to_rad(angular_speed * rotation_dir * delta)
+
+	var velocity = Vector2.RIGHT.rotated(rotation) * speed * delta
+	position += velocity
+
+	SnakeManager.add_head_position(position)
+	
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("hrana"):
+		match area.type:
+			Hrana.Type.GOOD:
+				SnakeManager.add_segment()
+				SnakeManager.score += 1
+			Hrana.Type.BAD:
+				SnakeManager.remove_last_segment()
+				SnakeManager.score -= 1
+		area.queue_free()
+		get_node("/root/main").spawn_food()
