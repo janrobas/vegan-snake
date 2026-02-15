@@ -46,7 +46,7 @@
 load_path = "res://.godot/imported/30_chocolatecake.png-c07de8e772cdcb553721a171326f5070.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3rd3"]
-radius = 17.0294
+radius = 20.0
 
 [node name="Hrana" type="Area2D" groups=["hrana"]]
 script = ExtResource("1_y0u8l")
@@ -54,7 +54,7 @@ good_textures = Array[Texture2D]([ExtResource("2_vtgvo"), ExtResource("3_p0mfi")
 bad_textures = Array[Texture2D]([ExtResource("28_e7oq6"), ExtResource("29_7ttdn"), ExtResource("30_ditrl"), ExtResource("31_tx2w2"), ExtResource("32_yphf1"), ExtResource("33_3xnlh"), ExtResource("34_vtg4v"), ExtResource("35_l08f8"), ExtResource("36_q0ygt"), ExtResource("37_xslf1"), ExtResource("38_txvy0"), ExtResource("39_y8sdn"), ExtResource("40_mh6ra"), ExtResource("41_ai7kg")])
 
 [node name="HranaSprite" type="Sprite2D" parent="."]
-scale = Vector2(1.4375, 1.4375)
+scale = Vector2(1.9375, 1.9375)
 texture = SubResource("CompressedTexture2D_o5d7d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -2,6 +2,7 @@ extends Node2D
 
 @export var speed := 220.0          # pixels per second
 @export var angular_speed := 210.0  # degrees per second
+var food_particles = preload("res://objekti/hrana_particles.tscn")
 
 func _ready():
 	pass
@@ -37,14 +38,21 @@ func flash(color: Color, duration: float):
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("hrana"):
+		var particles = food_particles.instantiate()
+		particles.global_position = area.global_position
+		
 		match area.type:
 			Hrana.Type.GOOD:
+				particles.modulate = Color.GREEN
 				SnakeManager.add_segment()
 				SnakeManager.score += 1
 			Hrana.Type.BAD:
+				particles.modulate = Color.RED
 				SnakeManager.remove_last_segment()
 				SnakeManager.score -= 1
 				flash(Color.RED, 0.5)
+				
+		get_node("/root/main").add_child(particles)
 		area.queue_free()
 		#get_node("/root/main").spawn_food()
 		get_node("/root/main").call_deferred("spawn_food")

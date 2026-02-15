@@ -2,6 +2,7 @@ extends Node2D
 
 @export var food_scene: PackedScene
 var rng = RandomNumberGenerator.new()
+@onready var play_area = $PlayArea/CollisionShape2D
 
 func _ready():
 	reset_snake()
@@ -13,7 +14,7 @@ func reset_snake():
 	$Slabakaca1.position = Vector2(500, 300)
 	$Slabakaca1.rotation = 0
 	SnakeManager.trail.clear()
-	SnakeManager.time_left = 123
+	SnakeManager.time_left = 200
 	SnakeManager.score = 0
 		
 	spawn_food()
@@ -28,11 +29,16 @@ func spawn_food():
 	var random_type = Hrana.Type.GOOD if randi() % 2 == 0 else Hrana.Type.BAD
 	food.set_type(random_type)
 	
-	var pos = Vector2(rng.randf_range(100, 900), rng.randf_range(100, 600))
+	var play_area_rect = play_area.shape
 	
-	while is_position_occupied(pos):
-		pos = Vector2(rng.randf_range(100, 900), rng.randf_range(100, 600))
-		
+	var pos = null
+	
+	while not pos or is_position_occupied(pos):
+		pos = Vector2(
+			rng.randf_range(32, play_area_rect.size.x - 64),
+			rng.randf_range(32, play_area_rect.size.y - 64)
+		)
+	
 	food.global_position = pos
 	add_child(food)
 
@@ -41,7 +47,6 @@ func is_position_occupied(pos: Vector2) -> bool:
 		if segment.global_position.distance_to(pos) < 20:
 			return true
 	return false
-
 
 func _on_timer_timeout() -> void:
 	spawn_food()

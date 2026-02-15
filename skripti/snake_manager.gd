@@ -12,7 +12,7 @@ var segments : Array[Node] = []
 var score: int = 0 : set = _set_score
 var time_left: int = 10 : set = _set_time_left
 
-const SEGMENT_DISTANCE := 30.0
+const SEGMENT_DISTANCE := 36.0
 
 var trail : Array[Dictionary] = []  # {pos: Vector2, dist: float}
 

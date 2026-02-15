@@ -10,7 +10,7 @@
 size = Vector2(1100, 3000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
-size = Vector2(1284, 722)
+size = Vector2(1175.88, 673.625)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -47,7 +47,7 @@ shape = SubResource("RectangleShape2D_4j5ol")
 action = "turn_left"
 
 [node name="TouchScreenButtonRight" type="TouchScreenButton" parent="CanvasLayer/Control"]
-position = Vector2(1284, 5)
+position = Vector2(1177.43, 0)
 shape = SubResource("RectangleShape2D_4j5ol")
 action = "turn_right"
 
@@ -67,12 +67,8 @@ autostart = true
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
-position = Vector2(640, 362)
+position = Vector2(574.063, 322.188)
 shape = SubResource("RectangleShape2D_0ha60")
-
-[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="."]
-shape = SubResource("RectangleShape2D_4j5ol")
-action = "turn_left"
 
 [connection signal="timeout" from="TimerHrana" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerKonecIgre" to="." method="_on_timer_konec_igre_timeout"]
