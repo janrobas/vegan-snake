@@ -14,13 +14,14 @@ func reset_snake():
 	$Slabakaca1.position = Vector2(500, 300)
 	$Slabakaca1.rotation = 0
 	SnakeManager.trail.clear()
-	SnakeManager.time_left = 200
-	SnakeManager.score = 0
+	SnakeManager.time_left = 180
+	SnakeManager.score = -666
+	SnakeManager.konec_igre = false
 		
 	spawn_food()
 	
 	for i in range(3):
-		await get_tree().create_timer(0.4).timeout
+		await get_tree().create_timer(0.6).timeout
 		SnakeManager.add_segment()
 
 func spawn_food():
@@ -62,7 +63,6 @@ func _on_timer_konec_igre_timeout() -> void:
 func _on_play_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("kacja_glava"):
 		SnakeManager.game_over()
-
 
 func _on_play_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("kacja_glava"):

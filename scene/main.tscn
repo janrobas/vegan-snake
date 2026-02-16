@@ -10,7 +10,7 @@
 size = Vector2(1100, 3000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
-size = Vector2(1284, 722)
+size = Vector2(1326, 770)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -61,7 +61,7 @@ position = Vector2(548, 236)
 [node name="Snake" type="Node2D" parent="." groups=["snake_container"]]
 
 [node name="TimerHrana" type="Timer" parent="."]
-wait_time = 2.658
+wait_time = 2.912
 autostart = true
 
 [node name="TimerKonecIgre" type="Timer" parent="."]

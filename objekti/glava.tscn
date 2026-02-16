@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqyu142lcsp0q"]
+[gd_scene load_steps=9 format=3 uid="uid://bqyu142lcsp0q"]
 
 [ext_resource type="Script" uid="uid://bydxukpvetu50" path="res://skripti/kacja_glava.gd" id="1_ik8gx"]
 [ext_resource type="Texture2D" uid="uid://d3oe57s8l7use" path="res://images/kaca/slabakaca_glava.png" id="2_5mfks"]
 [ext_resource type="Texture2D" uid="uid://b3pkcpre6n8sd" path="res://images/kaca/slabakaca_glava_jezik.png" id="3_5mfks"]
 [ext_resource type="Texture2D" uid="uid://dfvxssmmcyxhj" path="res://images/kaca/slabakaca_glava_jezik_pol.png" id="3_vyvbo"]
+[ext_resource type="AudioStream" uid="uid://blnw175d7hggq" path="res://sound/ok.ogg" id="5_c64ue"]
+[ext_resource type="AudioStream" uid="uid://bvxeh5jvwpyrs" path="res://sound/s.ogg" id="6_qn3ca"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vyvbo"]
 animations = [{
@@ -42,5 +44,12 @@ frame_progress = 0.791157
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.5, 0)
 shape = SubResource("RectangleShape2D_tccwc")
+
+[node name="AudioStreamPlayerGood" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_c64ue")
+volume_db = -2.526
+
+[node name="AudioStreamPlayerBad" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_qn3ca")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

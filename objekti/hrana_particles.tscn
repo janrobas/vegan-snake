@@ -1,25 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://ig3u4djs3sst"]
 
-[ext_resource type="Texture2D" uid="uid://1x5s6hy3ymvf" path="res://images/ostalo/particle.png" id="1_3tlrl"]
+[ext_resource type="Texture2D" uid="uid://c32r31xrrv2lh" path="res://images/ostalo/particle_kul.png" id="1_3tlrl"]
 [ext_resource type="Script" uid="uid://c78p2e70sai4k" path="res://skripti/hrana_particles.gd" id="1_nyx4j"]
 
 [node name="HranaParticles" type="CPUParticles2D"]
 emitting = false
-amount = 11
+amount = 10
 texture = ExtResource("1_3tlrl")
-lifetime = 1.53
+lifetime = 0.97
 one_shot = true
-speed_scale = 1.52
-explosiveness = 0.72
-randomness = 0.04
+explosiveness = 0.5
 emission_shape = 1
-emission_sphere_radius = 12.43
+emission_sphere_radius = 6.4
 direction = Vector2(0, 0)
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 75.26
-initial_velocity_max = 75.26
+initial_velocity_min = 55.33
+initial_velocity_max = 55.33
 angular_velocity_max = 119.15
-orbit_velocity_min = 0.5
-orbit_velocity_max = 0.5
+orbit_velocity_min = 0.4
+orbit_velocity_max = 0.4
 script = ExtResource("1_nyx4j")

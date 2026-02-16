@@ -18,8 +18,13 @@ var trail : Array[Dictionary] = []  # {pos: Vector2, dist: float}
 
 var total_trail_length := 0.0
 
+var head = null
+
+var konec_igre = false
+
 func record_head_position():
-	var head = get_tree().get_first_node_in_group("kacja_glava")
+	if not head:
+		head = get_tree().get_first_node_in_group("kacja_glava")
 	if not head:
 		return
 
@@ -119,6 +124,12 @@ func get_head_position() -> Vector2:
 	return trail[-1]["pos"]
 	
 func game_over():
+	if time_left < 3 or konec_igre:
+		return
+	konec_igre = true
+	if head:
+		head.get_node("AudioStreamPlayerBad").play()
+	await get_tree().create_timer(0.5).timeout
 	score = 0
 	time_left = 0
 
