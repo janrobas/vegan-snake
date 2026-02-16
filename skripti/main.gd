@@ -5,6 +5,7 @@ var rng = RandomNumberGenerator.new()
 @onready var play_area = $PlayArea/CollisionShape2D
 var start_color: Color
 var end_color = Color.BLACK
+const max_iskanje_proste_celice = 20
 
 @onready var background = $CanvasLayerBack/ColorRectBack
 
@@ -42,14 +43,18 @@ func spawn_food():
 	
 	var pos = null
 	
-	while not pos or is_position_occupied(pos):
+	var iskanje_proste_celice = 0
+	
+	while (not pos or is_position_occupied(pos)) and iskanje_proste_celice < max_iskanje_proste_celice:
 		pos = Vector2(
 			rng.randf_range(32, play_area_rect.size.x - 64),
 			rng.randf_range(32, play_area_rect.size.y - 64)
 		)
+		iskanje_proste_celice += 1
 	
-	food.global_position = pos
-	add_child(food)
+	if iskanje_proste_celice < max_iskanje_proste_celice:
+		food.global_position = pos
+		add_child(food)
 
 func is_position_occupied(pos: Vector2) -> bool:
 	for segment in SnakeManager.segments:

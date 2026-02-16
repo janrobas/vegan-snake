@@ -22,16 +22,23 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 78
 text = "Veganska kača"
 
-[node name="Label2" type="Label" parent="CanvasLayer/VFlowContainer"]
+[node name="LabelVerzija" type="Label" parent="CanvasLayer/VFlowContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
-text = "Verzija cvek"
+text = "Verzija cvek pika dvojka"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/VFlowContainer"]
+[node name="ButtonStart" type="Button" parent="CanvasLayer/VFlowContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 51
 text = "Začni!"
 script = ExtResource("1_ku7gb")
 
-[connection signal="pressed" from="CanvasLayer/VFlowContainer/Button" to="CanvasLayer/VFlowContainer/Button" method="_on_pressed"]
+[node name="ButtonIzhod" type="Button" parent="CanvasLayer/VFlowContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+text = "Izhod"
+script = ExtResource("1_ku7gb")
+
+[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonStart" to="CanvasLayer/VFlowContainer/ButtonStart" method="_on_pressed_start"]
+[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonIzhod" to="CanvasLayer/VFlowContainer/ButtonStart" method="_on_button_izhod_pressed"]

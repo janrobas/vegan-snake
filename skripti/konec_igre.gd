@@ -20,9 +20,9 @@ func _ready() -> void:
 		foraLabel.text = "Not great, not terrible!"
 	elif SnakeManager.score < 9:
 		foraLabel.text = "Čestitke za trud!"
-	elif SnakeManager.score < 12:
-		foraLabel.text = "Odličen slalom okoli mesa!"
-	elif SnakeManager.score < 20:
+	elif SnakeManager.score < 15:
+		foraLabel.text = "Odličen veganski slalom!"
+	elif SnakeManager.score < 30:
 		foraLabel.text = "Certificirano vegansko!"
 	else:
 		foraLabel.text = "Ti si veganska kača!"
