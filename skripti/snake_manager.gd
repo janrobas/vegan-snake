@@ -119,6 +119,7 @@ func get_head_position() -> Vector2:
 	return trail[-1]["pos"]
 	
 func game_over():
+	score = 0
 	time_left = 0
 
 func _process(delta: float) -> void:

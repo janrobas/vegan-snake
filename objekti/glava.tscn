@@ -37,7 +37,7 @@ position = Vector2(2, 0)
 scale = Vector2(1.15789, 0.88801)
 sprite_frames = SubResource("SpriteFrames_vyvbo")
 autoplay = "default"
-frame_progress = 0.839256
+frame_progress = 0.791157
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.5, 0)

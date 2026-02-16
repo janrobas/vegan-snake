@@ -18,22 +18,6 @@ food_scene = ExtResource("2_h2yge")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="LabelCas" type="Label" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -70.0
-offset_bottom = 23.0
-grow_horizontal = 0
-text = "0 sekund"
-script = ExtResource("4_0ha60")
-
-[node name="LabelTocke" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "TEST"
-script = ExtResource("4_1bvp3")
-
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
@@ -50,6 +34,26 @@ action = "turn_left"
 position = Vector2(1284, 5)
 shape = SubResource("RectangleShape2D_4j5ol")
 action = "turn_right"
+
+[node name="LabelCas" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 36
+text = "0 sekund"
+script = ExtResource("4_0ha60")
+
+[node name="LabelTocke" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 36
+text = "TEST"
+script = ExtResource("4_1bvp3")
 
 [node name="Slabakaca1" parent="." groups=["kacja_glava"] instance=ExtResource("1_0xm2m")]
 position = Vector2(548, 236)

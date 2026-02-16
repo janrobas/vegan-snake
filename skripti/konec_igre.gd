@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
-	$LabelTocke.text = "Točke: " + str(SnakeManager.score)
+	$CanvasLayer/VFlowContainer/LabelTocke.text = "Točke: " + str(SnakeManager.score)
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/meni.tscn")

@@ -20,7 +20,7 @@ func reset_snake():
 	spawn_food()
 	
 	for i in range(3):
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.4).timeout
 		SnakeManager.add_segment()
 
 func spawn_food():
