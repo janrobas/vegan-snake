@@ -27,8 +27,8 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tccwc"]
-size = Vector2(27, 34)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_c64ue"]
+points = PackedVector2Array(-9.5, -17, -9.5, 16, 15.5, -1)
 
 [node name="CharacterBody2D" type="Area2D"]
 z_index = 1
@@ -42,8 +42,8 @@ autoplay = "default"
 frame_progress = 0.791157
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.5, 0)
-shape = SubResource("RectangleShape2D_tccwc")
+position = Vector2(-1.5, 0)
+shape = SubResource("ConvexPolygonShape2D_c64ue")
 
 [node name="AudioStreamPlayerGood" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_c64ue")

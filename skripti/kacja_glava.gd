@@ -24,7 +24,9 @@ func _process(delta: float) -> void:
 	rotation += deg_to_rad(angular_speed * rotation_dir * delta)
 
 	var velocity = Vector2.RIGHT.rotated(rotation) * speed * delta
-	position += velocity
+	
+	if not SnakeManager.konec_igre:
+		position += velocity
 
 	#SnakeManager.add_head_position(position)
 

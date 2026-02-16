@@ -22,6 +22,15 @@ var head = null
 
 var konec_igre = false
 
+var max_time: int = 180
+
+func reset():
+	SnakeManager.segments.clear()
+	SnakeManager.trail.clear()
+	SnakeManager.time_left = max_time
+	SnakeManager.score = 0
+	SnakeManager.konec_igre = false
+
 func record_head_position():
 	if not head:
 		head = get_tree().get_first_node_in_group("kacja_glava")
@@ -130,7 +139,7 @@ func game_over():
 	if head:
 		head.get_node("AudioStreamPlayerBad").play()
 	await get_tree().create_timer(0.5).timeout
-	score = 0
+	score = -666
 	time_left = 0
 
 func _process(delta: float) -> void:

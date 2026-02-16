@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bymsex5b3e8s5" path="res://skripti/kacji_segment.gd" id="2_uditw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkjjn"]
-size = Vector2(36, 24)
+size = Vector2(34, 20)
 
 [node name="Area2D" type="Area2D" groups=["kacji_segment"]]
 script = ExtResource("2_uditw")

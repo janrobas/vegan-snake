@@ -46,7 +46,7 @@
 load_path = "res://.godot/imported/30_chocolatecake.png-c07de8e772cdcb553721a171326f5070.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3rd3"]
-radius = 20.0
+radius = 19.0
 
 [node name="Hrana" type="Area2D" groups=["hrana"]]
 script = ExtResource("1_y0u8l")

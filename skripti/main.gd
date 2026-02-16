@@ -3,21 +3,29 @@ extends Node2D
 @export var food_scene: PackedScene
 var rng = RandomNumberGenerator.new()
 @onready var play_area = $PlayArea/CollisionShape2D
+var start_color: Color
+var end_color = Color.BLACK
 
+@onready var background = $CanvasLayerBack/ColorRectBack
+
+func generate_start_color():
+	var hue = rng.randf()
+	var sat = rng.randf_range(0.2, 0.4)
+	var val = rng.randf_range(0.5, 0.7)
+	start_color = Color.from_hsv(hue, sat, val)
+	
 func _ready():
+	generate_start_color()
 	reset_snake()
 		
 func reset_snake():
 	#for segment in SnakeManager.segments:
 		#segment.queue_free()
-	SnakeManager.segments.clear()
 	$Slabakaca1.position = Vector2(500, 300)
 	$Slabakaca1.rotation = 0
-	SnakeManager.trail.clear()
-	SnakeManager.time_left = 180
-	SnakeManager.score = -666
-	SnakeManager.konec_igre = false
-		
+	SnakeManager.reset()
+	generate_start_color()
+	background.color = start_color
 	spawn_food()
 	
 	for i in range(3):
@@ -45,11 +53,11 @@ func spawn_food():
 
 func is_position_occupied(pos: Vector2) -> bool:
 	for segment in SnakeManager.segments:
-		if segment.global_position.distance_to(pos) < 40:
+		if segment.global_position.distance_to(pos) < 60:
 			return true
 			
 	for food in get_tree().get_nodes_in_group("hrana"):
-		if food.global_position.distance_to(pos) < 80:
+		if food.global_position.distance_to(pos) < 100:
 			return true
 	
 	return false
@@ -67,3 +75,10 @@ func _on_play_area_body_exited(body: Node2D) -> void:
 func _on_play_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("kacja_glava"):
 		SnakeManager.game_over()
+
+func _process(delta: float) -> void:
+	update_background_color()
+	
+func update_background_color():
+	var t = SnakeManager.time_left / float(SnakeManager.max_time)
+	background.color = start_color.lerp(end_color, 1.0 - t)
