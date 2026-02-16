@@ -44,8 +44,13 @@ func spawn_food():
 
 func is_position_occupied(pos: Vector2) -> bool:
 	for segment in SnakeManager.segments:
-		if segment.global_position.distance_to(pos) < 20:
+		if segment.global_position.distance_to(pos) < 40:
 			return true
+			
+	for food in get_tree().get_nodes_in_group("hrana"):
+		if food.global_position.distance_to(pos) < 80:
+			return true
+	
 	return false
 
 func _on_timer_timeout() -> void:

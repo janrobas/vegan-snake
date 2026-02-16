@@ -57,7 +57,7 @@ position = Vector2(548, 236)
 [node name="Snake" type="Node2D" parent="." groups=["snake_container"]]
 
 [node name="TimerHrana" type="Timer" parent="."]
-wait_time = 3.716
+wait_time = 2.658
 autostart = true
 
 [node name="TimerKonecIgre" type="Timer" parent="."]

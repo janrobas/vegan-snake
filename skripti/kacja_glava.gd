@@ -43,14 +43,14 @@ func _on_area_entered(area: Area2D) -> void:
 		
 		match area.type:
 			Hrana.Type.GOOD:
-				particles.modulate = Color.GREEN
+				particles.modulate = Color.GREEN_YELLOW
 				SnakeManager.add_segment()
 				SnakeManager.score += 1
 			Hrana.Type.BAD:
 				particles.modulate = Color.RED
 				SnakeManager.remove_last_segment()
-				SnakeManager.score -= 1
-				flash(Color.RED, 0.5)
+				SnakeManager.score -= 3
+				flash(Color.RED, 1)
 				
 		get_node("/root/main").add_child(particles)
 		area.queue_free()
