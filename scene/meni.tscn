@@ -1,12 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://myeibtroa5ls"]
+[gd_scene format=3 uid="uid://myeibtroa5ls"]
 
 [ext_resource type="Script" uid="uid://dl4y7pxyk2gwo" path="res://skripti/glavni_meni.gd" id="1_ku7gb"]
 
-[node name="meni" type="Node2D"]
+[node name="meni" type="Node2D" unique_id=1010381241]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1960642256]
 
-[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer"]
+[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer" unique_id=520147358]
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -17,24 +17,34 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/VFlowContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=454049675]
 layout_mode = 2
 theme_override_font_sizes/font_size = 78
 text = "Veganska kača"
-
-[node name="LabelVerzija" type="Label" parent="CanvasLayer/VFlowContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "Verzija cvek pika dvojka"
 horizontal_alignment = 1
 
-[node name="ButtonStart" type="Button" parent="CanvasLayer/VFlowContainer"]
+[node name="LabelVerzija" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=824951185]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Verzija cvek pika tri"
+horizontal_alignment = 1
+
+[node name="LabelNavodila" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=1842321500]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.7137255)
+theme_override_font_sizes/font_size = 29
+text = "Veganska hrana vam prinese 1 točko, neveganska pa odnese 3.
+Če ugriznete vase ali zapustite igralni prostor, bo konec igre.
+0 točk na koncu pravzaprav ni slab rezultat."
+horizontal_alignment = 1
+
+[node name="ButtonStart" type="Button" parent="CanvasLayer/VFlowContainer" unique_id=2005896582]
 layout_mode = 2
 theme_override_font_sizes/font_size = 51
 text = "Začni!"
 script = ExtResource("1_ku7gb")
 
-[node name="ButtonIzhod" type="Button" parent="CanvasLayer/VFlowContainer"]
+[node name="ButtonIzhod" type="Button" parent="CanvasLayer/VFlowContainer" unique_id=1824158428]
 layout_mode = 2
 theme_override_font_sizes/font_size = 51
 text = "Izhod"

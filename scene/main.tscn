@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqosilhhp7rb3"]
+[gd_scene format=3 uid="uid://bqosilhhp7rb3"]
 
 [ext_resource type="PackedScene" uid="uid://bqyu142lcsp0q" path="res://objekti/glava.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cs0yrejfcfl5j" path="res://skripti/main.gd" id="1_h2yge"]
@@ -12,23 +12,23 @@ size = Vector2(1100, 3000)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
 size = Vector2(1326, 770)
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" unique_id=1760253139]
 script = ExtResource("1_h2yge")
 food_scene = ExtResource("2_h2yge")
 
-[node name="CanvasLayerBack" type="CanvasLayer" parent="."]
+[node name="CanvasLayerBack" type="CanvasLayer" parent="." unique_id=1151739220]
 layer = -1
 
-[node name="ColorRectBack" type="ColorRect" parent="CanvasLayerBack"]
+[node name="ColorRectBack" type="ColorRect" parent="CanvasLayerBack" unique_id=215986904]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayerUI" type="CanvasLayer" parent="." unique_id=1147105092]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayerUI" unique_id=904331600]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,16 +36,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="CanvasLayer/Control"]
+[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="CanvasLayerUI/Control" unique_id=1081285512]
 shape = SubResource("RectangleShape2D_4j5ol")
 action = "turn_left"
 
-[node name="TouchScreenButtonRight" type="TouchScreenButton" parent="CanvasLayer/Control"]
+[node name="TouchScreenButtonRight" type="TouchScreenButton" parent="CanvasLayerUI/Control" unique_id=1046316842]
 position = Vector2(1284, 5)
 shape = SubResource("RectangleShape2D_4j5ol")
 action = "turn_right"
 
-[node name="LabelCas" type="Label" parent="CanvasLayer/Control"]
+[node name="LabelCas" type="Label" parent="CanvasLayerUI/Control" unique_id=311269118]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -57,7 +57,7 @@ theme_override_font_sizes/font_size = 36
 text = "0 sekund"
 script = ExtResource("4_0ha60")
 
-[node name="LabelTocke" type="Label" parent="CanvasLayer/Control"]
+[node name="LabelTocke" type="Label" parent="CanvasLayerUI/Control" unique_id=2036032586]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
@@ -65,22 +65,57 @@ theme_override_font_sizes/font_size = 36
 text = "TEST"
 script = ExtResource("4_1bvp3")
 
-[node name="Slabakaca1" parent="." groups=["kacja_glava"] instance=ExtResource("1_0xm2m")]
+[node name="CanvasLayerNasveti" type="CanvasLayer" parent="." unique_id=2106033256]
+
+[node name="ControlFade" type="Control" parent="CanvasLayerNasveti" unique_id=1037554668]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelLevo" type="Label" parent="CanvasLayerNasveti/ControlFade" unique_id=1884997080]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_right = 399.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 27
+text = "Pritiskajte sem za ovinek na levo."
+
+[node name="LabelDesno" type="Label" parent="CanvasLayerNasveti/ControlFade" unique_id=1819798380]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -423.0
+offset_top = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 27
+text = "Pritiskajte sem za ovinek na desno."
+
+[node name="Slabakaca1" parent="." unique_id=1363728755 groups=["kacja_glava"] instance=ExtResource("1_0xm2m")]
 position = Vector2(548, 236)
 
-[node name="Snake" type="Node2D" parent="." groups=["snake_container"]]
+[node name="Snake" type="Node2D" parent="." unique_id=1390852822 groups=["snake_container"]]
 
-[node name="TimerHrana" type="Timer" parent="."]
+[node name="TimerHrana" type="Timer" parent="." unique_id=1942128223]
 wait_time = 2.912
 autostart = true
 
-[node name="TimerKonecIgre" type="Timer" parent="."]
+[node name="TimerKonecIgre" type="Timer" parent="." unique_id=366702195]
 autostart = true
 
-[node name="PlayArea" type="Area2D" parent="."]
+[node name="PlayArea" type="Area2D" parent="." unique_id=1163609640]
 collision_mask = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea" unique_id=144286567]
 position = Vector2(640, 362)
 shape = SubResource("RectangleShape2D_0ha60")
 

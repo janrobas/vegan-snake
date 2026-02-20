@@ -18,6 +18,15 @@ func generate_start_color():
 func _ready():
 	generate_start_color()
 	reset_snake()
+	
+	var os_name = OS.get_name()
+	if os_name == "Android" or os_name == "iOS":
+		$CanvasLayerNasveti.show()
+		var container = $CanvasLayerNasveti/ControlFade
+		var tween = create_tween()
+		tween.tween_property(container, "modulate", Color(1, 1, 1, 0), 5.0)
+	else:
+		$CanvasLayerNasveti.hide()
 		
 func reset_snake():
 	#for segment in SnakeManager.segments:
