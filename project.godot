@@ -15,7 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Veganska Kača"
-config/version="1.3"
+config/description="Preprosta igra, kjer voziš vegansko kačo."
+config/version="1.4"
 run/main_scene="uid://myeibtroa5ls"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
