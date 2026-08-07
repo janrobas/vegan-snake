@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuy7dtyouypy"]
+[gd_scene format=3 uid="uid://cuy7dtyouypy"]
 
-[ext_resource type="Texture2D" uid="uid://1x5s6hy3ymvf" path="res://images/ostalo/particle.png" id="1_es053"]
-[ext_resource type="Script" uid="uid://c78p2e70sai4k" path="res://skripti/hrana_particles.gd" id="2_wpjj6"]
+[ext_resource type="Texture2D" uid="uid://1x5s6hy3ymvf" path="res://images/other/particle.png" id="1_es053"]
+[ext_resource type="Script" uid="uid://c78p2e70sai4k" path="res://scripts/food_particles.gd" id="2_wpjj6"]
 
-[node name="HranaParticles" type="CPUParticles2D"]
+[node name="FoodParticles" type="CPUParticles2D" unique_id=1552331242]
 emitting = false
 amount = 20
 texture = ExtResource("1_es053")

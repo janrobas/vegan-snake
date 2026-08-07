@@ -15,8 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Veganska Kača"
-config/description="Preprosta igra, kjer voziš vegansko kačo."
-config/version="1.5"
+config/description="A simple game where you control a vegan snake."
+config/version="0.5"
 run/main_scene="uid://myeibtroa5ls"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
@@ -24,7 +24,7 @@ config/icon="uid://di2cbff11ty6c"
 
 [autoload]
 
-SnakeManager="*res://skripti/snake_manager.gd"
+SnakeManager="*res://scripts/snake_manager.gd"
 
 [display]
 

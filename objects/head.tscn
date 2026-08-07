@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqyu142lcsp0q"]
+[gd_scene format=3 uid="uid://bqyu142lcsp0q"]
 
-[ext_resource type="Script" uid="uid://bydxukpvetu50" path="res://skripti/kacja_glava.gd" id="1_ik8gx"]
-[ext_resource type="Texture2D" uid="uid://d3oe57s8l7use" path="res://images/kaca/slabakaca_glava.png" id="2_5mfks"]
-[ext_resource type="Texture2D" uid="uid://b3pkcpre6n8sd" path="res://images/kaca/slabakaca_glava_jezik.png" id="3_5mfks"]
-[ext_resource type="Texture2D" uid="uid://dfvxssmmcyxhj" path="res://images/kaca/slabakaca_glava_jezik_pol.png" id="3_vyvbo"]
+[ext_resource type="Script" uid="uid://bydxukpvetu50" path="res://scripts/snake_head.gd" id="1_ik8gx"]
+[ext_resource type="Texture2D" uid="uid://d3oe57s8l7use" path="res://images/snake/head.png" id="2_5mfks"]
+[ext_resource type="Texture2D" uid="uid://b3pkcpre6n8sd" path="res://images/snake/head_t.png" id="3_5mfks"]
+[ext_resource type="Texture2D" uid="uid://dfvxssmmcyxhj" path="res://images/snake/head_t2.png" id="3_vyvbo"]
 [ext_resource type="AudioStream" uid="uid://blnw175d7hggq" path="res://sound/ok.ogg" id="5_c64ue"]
 [ext_resource type="AudioStream" uid="uid://bvxeh5jvwpyrs" path="res://sound/s.ogg" id="6_qn3ca"]
 
@@ -30,26 +30,26 @@ animations = [{
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_c64ue"]
 points = PackedVector2Array(-9.5, -17, -9.5, 16, 15.5, -1)
 
-[node name="CharacterBody2D" type="Area2D"]
+[node name="CharacterBody2D" type="Area2D" unique_id=1624458020]
 z_index = 1
 script = ExtResource("1_ik8gx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1448853784]
 position = Vector2(2, 0)
 scale = Vector2(1.15789, 0.88801)
 sprite_frames = SubResource("SpriteFrames_vyvbo")
 autoplay = "default"
 frame_progress = 0.791157
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486339150]
 position = Vector2(-1.5, 0)
 shape = SubResource("ConvexPolygonShape2D_c64ue")
 
-[node name="AudioStreamPlayerGood" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayerGood" type="AudioStreamPlayer2D" parent="." unique_id=995680952]
 stream = ExtResource("5_c64ue")
 volume_db = -2.526
 
-[node name="AudioStreamPlayerBad" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayerBad" type="AudioStreamPlayer2D" parent="." unique_id=722514427]
 stream = ExtResource("6_qn3ca")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

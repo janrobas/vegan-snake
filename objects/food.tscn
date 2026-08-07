@@ -1,6 +1,6 @@
-[gd_scene load_steps=44 format=3 uid="uid://damdfxfi8p6l"]
+[gd_scene format=3 uid="uid://damdfxfi8p6l"]
 
-[ext_resource type="Script" uid="uid://duukxxg8r0t0t" path="res://skripti/hrana.gd" id="1_y0u8l"]
+[ext_resource type="Script" uid="uid://duukxxg8r0t0t" path="res://scripts/food.gd" id="1_y0u8l"]
 [ext_resource type="Texture2D" uid="uid://c0cj2sjp8cvnn" path="res://images/vegan/05_apple_pie.png" id="2_vtgvo"]
 [ext_resource type="Texture2D" uid="uid://cphjb8hn3ww8x" path="res://images/vegan/07_bread.png" id="3_p0mfi"]
 [ext_resource type="Texture2D" uid="uid://bb2cnxk7ca1c" path="res://images/vegan/09_baguette.png" id="4_lhbfk"]
@@ -48,14 +48,14 @@ load_path = "res://.godot/imported/30_chocolatecake.png-c07de8e772cdcb553721a171
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3rd3"]
 radius = 19.0
 
-[node name="Hrana" type="Area2D" groups=["hrana"]]
+[node name="Food" type="Area2D" unique_id=1839633017 groups=["food"]]
 script = ExtResource("1_y0u8l")
 good_textures = Array[Texture2D]([ExtResource("2_vtgvo"), ExtResource("3_p0mfi"), ExtResource("4_lhbfk"), ExtResource("5_lqut0"), ExtResource("6_epejj"), ExtResource("7_iaxc0"), ExtResource("8_o5onb"), ExtResource("9_53sht"), ExtResource("10_ul41p"), ExtResource("11_t4eqs"), ExtResource("12_rsifv"), ExtResource("13_kypsc"), ExtResource("14_qrbl5"), ExtResource("15_b6lrd"), ExtResource("16_rb8f1"), ExtResource("17_bin8a"), ExtResource("18_e7rkk"), ExtResource("19_bdm62"), ExtResource("20_oahoi"), ExtResource("21_blcnl"), ExtResource("22_pdpyy"), ExtResource("23_cye2o"), ExtResource("24_k3vxl"), ExtResource("25_clokx"), ExtResource("26_nqcag"), ExtResource("27_xkcys")])
 bad_textures = Array[Texture2D]([ExtResource("28_e7oq6"), ExtResource("29_7ttdn"), ExtResource("30_ditrl"), ExtResource("31_tx2w2"), ExtResource("32_yphf1"), ExtResource("33_3xnlh"), ExtResource("34_vtg4v"), ExtResource("35_l08f8"), ExtResource("36_q0ygt"), ExtResource("37_xslf1"), ExtResource("38_txvy0"), ExtResource("39_y8sdn"), ExtResource("40_mh6ra"), ExtResource("41_ai7kg")])
 
-[node name="HranaSprite" type="Sprite2D" parent="."]
+[node name="FoodSprite" type="Sprite2D" parent="." unique_id=768022658]
 scale = Vector2(2.1875, 2.1875)
 texture = SubResource("CompressedTexture2D_o5d7d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2022333346]
 shape = SubResource("CircleShape2D_i3rd3")

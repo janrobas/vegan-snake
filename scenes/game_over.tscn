@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://g0hvlp3bo1w3"]
+
+[ext_resource type="Script" uid="uid://ciura2fkxpmsa" path="res://scripts/game_over.gd" id="1_xeevv"]
+
+[node name="GameOver" type="Node2D" unique_id=1531996619]
+script = ExtResource("1_xeevv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=984883138]
+
+[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer" unique_id=1669568006]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -157.0
+offset_right = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="LabelGameOver" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=1864050578]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Game over!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelFunny" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=675517884]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelTocke" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=2070016890]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Points: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/VFlowContainer" unique_id=653539079]
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "Main Menu"
+
+[connection signal="pressed" from="CanvasLayer/VFlowContainer/Button" to="." method="_on_button_pressed"]

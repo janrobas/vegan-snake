@@ -5,7 +5,7 @@ signal score_changed(new_score)
 signal time_left_changed(time_left)
 
 const MAX_TRAIL_SIZE := 1000
-var body_scene : PackedScene = preload("res://objekti/segment_kace.tscn")
+var body_scene : PackedScene = preload("res://objects/snake_segment.tscn")
 
 var segments : Array[Node] = []
 
@@ -20,7 +20,7 @@ var total_trail_length := 0.0
 
 var head = null
 
-var konec_igre = false
+var is_game_over = false
 
 var max_time: int = 180
 
@@ -29,11 +29,11 @@ func reset():
 	SnakeManager.trail.clear()
 	SnakeManager.time_left = max_time
 	SnakeManager.score = 0
-	SnakeManager.konec_igre = false
+	SnakeManager.is_game_over = false
 
 func record_head_position():
 	if not head:
-		head = get_tree().get_first_node_in_group("kacja_glava")
+		head = get_tree().get_first_node_in_group("snake_head")
 	if not head:
 		return
 
@@ -63,7 +63,7 @@ func _set_time_left(value: int):
 	time_left_changed.emit(time_left)
 	
 	if time_left == 0:
-		get_tree().change_scene_to_file("res://scene/konec_igre.tscn")
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 func add_segment() -> void:
 	var new_segment = body_scene.instantiate()
@@ -133,9 +133,9 @@ func get_head_position() -> Vector2:
 	return trail[-1]["pos"]
 	
 func game_over():
-	if time_left < 3 or konec_igre:
+	if time_left < 3 or is_game_over:
 		return
-	konec_igre = true
+	is_game_over = true
 	if head:
 		head.get_node("AudioStreamPlayerBad").play()
 	await get_tree().create_timer(0.5).timeout

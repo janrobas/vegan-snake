@@ -5,4 +5,4 @@ func _ready():
 	_on_time_changed(SnakeManager.time_left)
 
 func _on_time_changed(new_time: int):
-	text = "Čas: " + str(new_time)
+	text = "Time: " + str(new_time)

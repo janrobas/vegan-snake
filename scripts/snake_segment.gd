@@ -1,7 +1,7 @@
 extends Node2D
 
 var segment_index : int = 0
-@onready var sprite = $Slabakaca2
+@onready var sprite = $SnakeSegmentSprite
 
 func set_segment_index(idx : int) -> void:
 	segment_index = idx
@@ -20,9 +20,9 @@ func _apply_tail_visual():
 	if not sprite:
 		return
 	if should_be_tail:
-		sprite.texture = preload("res://images/kaca/slabakaca_rep.png")
+		sprite.texture = preload("res://images/snake/tail.png")
 	else:
-		sprite.texture = preload("res://images/kaca/slabakaca1.png")
+		sprite.texture = preload("res://images/snake/segment.png")
 		
 func _process(_delta: float) -> void:
 	if segment_index == 0:

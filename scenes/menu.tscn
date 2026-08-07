@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://myeibtroa5ls"]
 
-[ext_resource type="Script" uid="uid://dl4y7pxyk2gwo" path="res://skripti/glavni_meni.gd" id="1_ku7gb"]
+[ext_resource type="Script" uid="uid://dl4y7pxyk2gwo" path="res://scripts/main_menu.gd" id="1_e5g8k"]
 
 [node name="meni" type="Node2D" unique_id=1010381241]
 
@@ -17,38 +17,38 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=454049675]
+[node name="LabelTitle" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=454049675]
 layout_mode = 2
 theme_override_font_sizes/font_size = 78
-text = "Veganska kača"
+text = "Vegan snake"
 horizontal_alignment = 1
 
-[node name="LabelVerzija" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=824951185]
+[node name="LabelVersion" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=824951185]
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
-text = "Verzija cvek pika pet"
+text = "Version 0.5"
 horizontal_alignment = 1
 
-[node name="LabelNavodila" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=1842321500]
+[node name="LabelInstructions" type="Label" parent="CanvasLayer/VFlowContainer" unique_id=1842321500]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 0.7137255)
 theme_override_font_sizes/font_size = 29
-text = "Veganska hrana vam prinese 1 točko, neveganska pa odnese 3.
-Če ugriznete vase ali zapustite igralni prostor, bo konec igre.
-0 točk na koncu pravzaprav ni slab rezultat."
+text = "Vegan food gives you 1 point, while non-vegan food deducts 3.
+If you bite yourself or leave the playing area, the game will be over.
+0 points at the end is actually not a bad result."
 horizontal_alignment = 1
 
 [node name="ButtonStart" type="Button" parent="CanvasLayer/VFlowContainer" unique_id=2005896582]
 layout_mode = 2
 theme_override_font_sizes/font_size = 51
-text = "Začni!"
-script = ExtResource("1_ku7gb")
+text = "Start!"
+script = ExtResource("1_e5g8k")
 
-[node name="ButtonIzhod" type="Button" parent="CanvasLayer/VFlowContainer" unique_id=1824158428]
+[node name="ButtonExit" type="Button" parent="CanvasLayer/VFlowContainer" unique_id=1824158428]
 layout_mode = 2
 theme_override_font_sizes/font_size = 51
-text = "Izhod"
-script = ExtResource("1_ku7gb")
+text = "Exit"
+script = ExtResource("1_e5g8k")
 
 [connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonStart" to="CanvasLayer/VFlowContainer/ButtonStart" method="_on_pressed_start"]
-[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonIzhod" to="CanvasLayer/VFlowContainer/ButtonStart" method="_on_button_izhod_pressed"]
+[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonExit" to="CanvasLayer/VFlowContainer/ButtonStart" method="_on_button_exit_pressed"]

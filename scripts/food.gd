@@ -13,10 +13,10 @@ func set_type(new_type: Type) -> void:
 	var textures = good_textures if type == Type.GOOD else bad_textures
 	if not textures.is_empty():
 		var random_index = randi() % textures.size()
-		$HranaSprite.texture = textures[random_index]
+		$FoodSprite.texture = textures[random_index]
 		avg_color = get_average_color(textures[random_index])   # compute average color
 	else:
-		$HranaSprite.texture = null
+		$FoodSprite.texture = null
 		push_warning("No textures assigned for food type: ", type)
 
 func get_average_color(texture: Texture2D) -> Color:

@@ -21,18 +21,18 @@ func _ready():
 	
 	var os_name = OS.get_name()
 	if os_name == "Android" or os_name == "iOS":
-		$CanvasLayerNasveti.show()
-		var container = $CanvasLayerNasveti/ControlFade
+		$CanvasLayerTips.show()
+		var container = $CanvasLayerTips/ControlFade
 		var tween = create_tween()
 		tween.tween_property(container, "modulate", Color(1, 1, 1, 0), 5.0)
 	else:
-		$CanvasLayerNasveti.hide()
+		$CanvasLayerTips.hide()
 		
 func reset_snake():
 	#for segment in SnakeManager.segments:
 		#segment.queue_free()
-	$Slabakaca1.position = Vector2(500, 300)
-	$Slabakaca1.rotation = 0
+	$SnakeHead.position = Vector2(500, 300)
+	$SnakeHead.rotation = 0
 	SnakeManager.reset()
 	generate_start_color()
 	background.color = start_color
@@ -70,7 +70,7 @@ func is_position_occupied(pos: Vector2) -> bool:
 		if segment.global_position.distance_to(pos) < 60:
 			return true
 			
-	for food in get_tree().get_nodes_in_group("hrana"):
+	for food in get_tree().get_nodes_in_group("food"):
 		if food.global_position.distance_to(pos) < 100:
 			return true
 	
@@ -83,11 +83,11 @@ func _on_timer_konec_igre_timeout() -> void:
 	SnakeManager.time_left -= 1
 
 func _on_play_area_body_exited(body: Node2D) -> void:
-	if body.is_in_group("kacja_glava"):
+	if body.is_in_group("snake_head"):
 		SnakeManager.game_over()
 
 func _on_play_area_area_exited(area: Area2D) -> void:
-	if area.is_in_group("kacja_glava"):
+	if area.is_in_group("snake_head"):
 		SnakeManager.game_over()
 
 func _process(delta: float) -> void:

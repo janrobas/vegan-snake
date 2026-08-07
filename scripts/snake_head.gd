@@ -2,8 +2,8 @@ extends Node2D
 
 @export var speed := 220.0          # pixels per second
 @export var angular_speed := 210.0  # degrees per second
-var hrana_particles = preload("res://objekti/hrana_particles.tscn")
-var hrana_particles_bad = preload("res://objekti/hrana_particles_bad.tscn")
+var hrana_particles = preload("res://objects/food_particles.tscn")
+var hrana_particles_bad = preload("res://objects/food_particles_bad.tscn")
 
 func _ready():
 	pass
@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 
 	var velocity = Vector2.RIGHT.rotated(rotation) * speed * delta
 	
-	if not SnakeManager.konec_igre:
+	if not SnakeManager.is_game_over:
 		position += velocity
 
 	#SnakeManager.add_head_position(position)
@@ -40,7 +40,7 @@ func flash(color: Color, duration: float):
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("hrana"):
+	if area.is_in_group("food"):
 		var particles
 		
 		if (area.type == Hrana.Type.BAD):
@@ -68,5 +68,5 @@ func _on_area_entered(area: Area2D) -> void:
 		area.queue_free()
 		#get_node("/root/main").spawn_food()
 		get_node("/root/main").call_deferred("spawn_food")
-	elif area.is_in_group("kacji_segment"):
+	elif area.is_in_group("snake_segment"):
 		game_over()

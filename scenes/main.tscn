@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bqosilhhp7rb3"]
 
-[ext_resource type="PackedScene" uid="uid://bqyu142lcsp0q" path="res://objekti/glava.tscn" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://cs0yrejfcfl5j" path="res://skripti/main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://damdfxfi8p6l" path="res://objekti/hrana.tscn" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://dgo5uuehll8dm" path="res://scene/label_cas.gd" id="4_0ha60"]
-[ext_resource type="Script" uid="uid://7wneggecd27c" path="res://skripti/label_tocke.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bqyu142lcsp0q" path="res://objects/head.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cs0yrejfcfl5j" path="res://scripts/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://damdfxfi8p6l" path="res://objects/food.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dgo5uuehll8dm" path="res://scenes/label_time.gd" id="4_0ha60"]
+[ext_resource type="Script" uid="uid://7wneggecd27c" path="res://scripts/label_score.gd" id="4_1bvp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5ol"]
 size = Vector2(1100, 3000)
@@ -65,9 +65,9 @@ theme_override_font_sizes/font_size = 36
 text = "TEST"
 script = ExtResource("4_1bvp3")
 
-[node name="CanvasLayerNasveti" type="CanvasLayer" parent="." unique_id=2106033256]
+[node name="CanvasLayerTips" type="CanvasLayer" parent="." unique_id=2106033256]
 
-[node name="ControlFade" type="Control" parent="CanvasLayerNasveti" unique_id=1037554668]
+[node name="ControlFade" type="Control" parent="CanvasLayerTips" unique_id=1037554668]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -75,7 +75,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LabelLevo" type="Label" parent="CanvasLayerNasveti/ControlFade" unique_id=1884997080]
+[node name="LabelLeft" type="Label" parent="CanvasLayerTips/ControlFade" unique_id=1884997080]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -86,7 +86,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 27
 text = "Pritiskajte sem za ovinek na levo."
 
-[node name="LabelDesno" type="Label" parent="CanvasLayerNasveti/ControlFade" unique_id=1819798380]
+[node name="LabelRight" type="Label" parent="CanvasLayerTips/ControlFade" unique_id=1819798380]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -100,16 +100,16 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 27
 text = "Pritiskajte sem za ovinek na desno."
 
-[node name="Slabakaca1" parent="." unique_id=1363728755 groups=["kacja_glava"] instance=ExtResource("1_0xm2m")]
+[node name="SnakeHead" parent="." unique_id=1363728755 groups=["snake_head"] instance=ExtResource("1_0xm2m")]
 position = Vector2(548, 236)
 
 [node name="Snake" type="Node2D" parent="." unique_id=1390852822 groups=["snake_container"]]
 
-[node name="TimerHrana" type="Timer" parent="." unique_id=1942128223]
+[node name="TimerFood" type="Timer" parent="." unique_id=1942128223]
 wait_time = 2.912
 autostart = true
 
-[node name="TimerKonecIgre" type="Timer" parent="." unique_id=366702195]
+[node name="TimerGameOver" type="Timer" parent="." unique_id=366702195]
 autostart = true
 
 [node name="PlayArea" type="Area2D" parent="." unique_id=1163609640]
@@ -119,6 +119,6 @@ collision_mask = 7
 position = Vector2(640, 362)
 shape = SubResource("RectangleShape2D_0ha60")
 
-[connection signal="timeout" from="TimerHrana" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="TimerKonecIgre" to="." method="_on_timer_konec_igre_timeout"]
+[connection signal="timeout" from="TimerFood" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimerGameOver" to="." method="_on_timer_konec_igre_timeout"]
 [connection signal="area_exited" from="PlayArea" to="." method="_on_play_area_area_exited"]

@@ -5,4 +5,4 @@ func _ready():
 	_on_score_changed(SnakeManager.score)
 
 func _on_score_changed(new_score: int):
-	text = "Točke: " + str(new_score)
+	text = "Points: " + str(new_score)
