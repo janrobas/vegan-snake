@@ -76,6 +76,7 @@ func add_segment() -> void:
 		push_error("Snake container not found")
 	
 	new_segment.set_segment_index(segments.size() + 1)
+	new_segment.global_position = get_position_for_segment(segments.size() + 1)
 	segments.append(new_segment)
 	refresh_tail_visual()
 
