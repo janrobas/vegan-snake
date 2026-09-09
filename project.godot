@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Veganska Kača"
+config/name="Vegan Snake"
 config/description="A simple game where you control a vegan snake."
 config/version="0.5"
 run/main_scene="uid://myeibtroa5ls"
