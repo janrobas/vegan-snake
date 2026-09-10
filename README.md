@@ -1,11 +1,13 @@
-# Veganska Kača
+# Vegan Snake
 
-Kača z gladkim premikanjem, ki je samo vegansko hrano.
+A snake game with smooth movement that eats only vegan food.
 
-## Kako igrati
-Vsaka igra je omejena na 3 minute. Kača se ne sme ugrizniti ali zapustiti igralnega prostora. Veganska hrana prinese 1 točko, neveganska pa odnese 3.
+Play it here: https://janrobas.itch.io/vegan-snake
 
-## Viri
-Slike za hrano:
+## How to play
+Each game is limited to 3 minutes. The snake must not bite itself or leave the playing area. Vegan food gives 1 point, while non-vegan food deducts 3.
+
+## Credits
+Food sprites:
 https://ghostpixxells.itch.io/pixelfood
 https://ghostpixxells.itch.io/pixel-mart
