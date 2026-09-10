@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dl4y7pxyk2gwo" path="res://scripts/main_menu.gd" id="1_e5g8k"]
 
 [node name="meni" type="Node2D" unique_id=1010381241]
+script = ExtResource("1_e5g8k")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1960642256]
 
@@ -42,13 +43,11 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 51
 text = "Start!"
-script = ExtResource("1_e5g8k")
 
 [node name="ButtonExit" type="Button" parent="CanvasLayer/VFlowContainer" unique_id=1824158428]
 layout_mode = 2
 theme_override_font_sizes/font_size = 51
 text = "Exit"
-script = ExtResource("1_e5g8k")
 
-[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonStart" to="CanvasLayer/VFlowContainer/ButtonStart" method="_on_pressed_start"]
-[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonExit" to="CanvasLayer/VFlowContainer/ButtonStart" method="_on_button_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonStart" to="." method="_on_pressed_start"]
+[connection signal="pressed" from="CanvasLayer/VFlowContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
